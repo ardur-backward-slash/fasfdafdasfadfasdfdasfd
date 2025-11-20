@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nexus Launch - Static</title>
+
+  <!-- Fonts: Cormorant Garamond + Futura fallback to Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="brand">
+          <h1 class="brand-title">NEXUS<br/>LAUNCH</h1>
+          <p class="brand-sub">Revolutionary platform coming soon. Join thousands waiting for exclusive early access.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-number" id="signups-count">0</div>
+            <div class="stat-label">Early signups</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" id="referrals-count">0</div>
+            <div class="stat-label">Referrals</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" id="milestones-count">0</div>
+            <div class="stat-label">Milestones</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card">
+          <h2>Get Early Access</h2>
+          <p class="muted">Sign up with your email to join the waitlist.</p>
+
+          <form id="signup-form" class="form">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" placeholder="you@domain.com" required />
+            <button type="submit" class="btn primary">Join Waitlist →</button>
+          </form>
+
+          <div class="separator">or</div>
+
+          <button id="toggle-referral" class="btn outline">Refer Friends for Early Access</button>
+
+          <div class="progress-block">
+            <div class="progress-header">
+              <span>Overall Progress</span>
+              <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="milestones" id="milestone-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="referral-section" class="referral-section hidden">
+      <div class="card small">
+        <h3>Refer a Friend</h3>
+        <p class="muted">Both you and your friend will get exclusive early access when we launch.</p>
+
+        <form id="referral-form" class="form">
+          <input id="referrer-name" type="text" placeholder="Your name" required />
+          <input id="referrer-email" type="email" placeholder="Your email" required />
+          <input id="friend-email" type="email" placeholder="Friend's email" required />
+          <button type="submit" class="btn primary">Send Referral</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
